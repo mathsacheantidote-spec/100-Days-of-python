@@ -114,7 +114,7 @@ def start1():
 game = True
 
 while game :
-     ans = input("Do you want to play 21 number game? (Yes \ no)\n-> ")
+     ans = input("Do you want to play 21 number game? (Yes \ no)\n -> ")
 
      if ans.lower() == 'yes':
          start1()
