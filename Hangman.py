@@ -72,37 +72,37 @@ hangman = [
     """
 ]
 name = input("Enter your name : ")
-print("Welcome to Hangman Game\n", "Good Luck !", name,"\n")
+print("Welcome to Hangman Game\n", "Good Luck!", name,"\n")
 print("Hint : The word is a fruit")
 
 while wrong_guesses < max_attempts :
     display = ""
     for letter in word:
         if letter in guessed :
-            display += letter +" "
+            display += letter + " "
         else :
           display += "_ "
-        print(hangman[wrong_guesses])
-        print("Word :", display)
+    print(hangman[wrong_guesses])
+    print("Word :", display)
 
-        if "_" not in display:
+    if "_" not in display:
             print("Congratulations. You Won !")
             print("The word is :", word)
             break
 
-        guess = input("Guess a letter : ").lower()
+    guess = input("Guess a letter : ").lower()
 
-        if len(guess) != 1 or not guess.isalpha():
+    if len(guess) != 1 or not guess.isalpha():
             print("Please enter one letter.")
             continue
-        if guess in guessed :
+    if guess in guessed :
             print("You already guessed that letter.")
             continue
-        guessed.append(guess)
+    guessed.append(guess)
 
-        if guess in word:
+    if guess in word:
             print("Correct Guess")
-        else :
+    else :
             wrong_guesses +=1
             print("Wrong Guess !")
 else:
